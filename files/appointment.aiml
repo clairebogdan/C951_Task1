@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+<!-- Appointment -->
+
+<category>
+    <pattern>APPOINTMENT</pattern>
+    <template>
+        <delay>1</delay>
+        Appointments can only be scheduled for Wednesdays from 9:00AM - 12:00PM.
+        <split/>
+        Please choose your timeslot.
+        
+        <button>
+            <text>9:00-9:30</text>
+            <postback>CONFIRM</postback>
+        </button>
+        
+        <button>
+            <text>9:30-10:00</text>
+            <postback>CONFIRM</postback>
+        </button>
+        
+        <button>
+            <text>10:00-10:30</text>
+            <postback>CONFIRM</postback>
+        </button>
+        
+        <button>
+            <text>10:30-11:00</text>
+            <postback>CONFIRM</postback>
+        </button>
+        
+        <button>
+            <text>11:30-12:00</text>
+            <postback>CONFIRM</postback>
+        </button>
+        
+        <button>
+            <text>Return to main menu</text>
+            <postback>MAIN</postback>
+        </button>
+        
+    </template>
+</category>
+
+
+<!-- Confirm appointment with other information -->
+
+    <category>
+        <pattern>CONFIRM</pattern>
+        <template>What is your WGU email?</template>
+    </category>
+
+    <category>
+        <pattern>_ WGU *</pattern>
+        <template>
+            
+            Thank you 😊 <break/>You will soon receive an email confirming your 
+            appointment.
+            
+            <button>
+                <text>Return to main menu</text>
+                <postback>MAIN</postback>
+            </button>
+            
+            </template>
+    </category>
+
+</aiml>

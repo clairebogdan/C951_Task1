@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	    
+<!-- Quiz -->
+
+<category>
+    <pattern>QUIZ</pattern>
+    <template>
+        <delay>1</delay>
+        Welcome to the Career Path Quiz! <break/>
+        You will be asked a series of questions about your personal preferences
+        and strengths in order to determine a career that best suits you! <break/>
+        Are you ready to begin?
+        
+        <button>
+            <text>Yes!</text>
+            <postback>YES</postback>
+        </button>
+        
+        <button>
+            <text>No, return to main menu</text>
+            <postback>MAIN</postback>
+        </button>
+        
+        </template>
+</category>
+
+<!-- Begin quiz -->
+
+<category>
+    <pattern>YES</pattern>
+    <template>
+        
+        QUIZ BEGINNING: <split/>
+        Do you enjoy writing code?
+        
+        <button>
+            <text>Yes</text>
+            <postback>YESCODE</postback>
+        </button>
+        
+        <button>
+            <text>No</text>
+            <postback>NOCODE</postback>
+        </button>
+        
+    </template>
+</category>
+
+<!-- Yes Code -->
+
+<category>
+    <pattern>YESCODE</pattern>
+    <template>
+        
+        Which trait would you consider one of your strengths?
+        
+        <button>
+            <text>Creativity</text>
+            <postback>CREATIVE</postback>
+        </button>
+        
+        <button>
+            <text>Attention to detail</text>
+            <postback>DETAIL</postback>
+        </button>
+        
+    </template>
+</category>
+
+
+<!-- Creative -->
+
+<category>
+    <pattern>CREATIVE</pattern>
+    <template>
+        
+        Which would you rather do?
+        
+        <button>
+            <text>Create apps, websites, or software</text>
+            <postback>NOGAMES</postback>
+        </button>
+        
+        <button>
+            <text>Create and design games</text>
+            <postback>GAMES</postback>
+        </button>
+    </template>
+</category>
+
+
+<!-- Software Developer -->
+<category>
+    <pattern>NOGAMES</pattern>
+    <template>
+        
+        You should become a 
+        <link>
+            <text>Software Developer!</text>
+            <url>https://www.rasmussen.edu/degrees/technology/blog/what-does-software-developer-do/</url>
+        </link>
+        
+        <button>
+            <text>Take quiz again</text>
+            <postback>YES</postback>
+        </button>
+        
+        <button>
+            <text>Return to main menu</text>
+            <postback>MAIN</postback>
+        </button>
+        
+    </template>
+</category>
+
+
+<!-- Video Game Developer -->
+
+<category>
+    <pattern>GAMES</pattern>
+    <template>
+        
+        You should become a 
+        <link>
+            <text>Video Game Developer!</text>
+            <url>https://study.com/articles/Game_Developer_Job_Description_Duties_and_Requirements.html</url>
+        </link>
+        
+        <button>
+            <text>Take quiz again</text>
+            <postback>YES</postback>
+        </button>
+        
+        <button>
+            <text>Return to main menu</text>
+            <postback>MAIN</postback>
+        </button>
+        
+    </template>
+</category>
+
+<!-- Data Scientist -->
+
+<category>
+    <pattern>DETAIL</pattern>
+    <template>
+        
+        You should become a 
+        <link>
+            <text>Data Scientist!</text>
+            <url>https://www.northeastern.edu/graduate/blog/what-does-a-data-scientist-do/</url>
+        </link>
+        
+        <button>
+            <text>Take quiz again</text>
+            <postback>YES</postback>
+        </button>
+        
+        <button>
+            <text>Return to main menu</text>
+            <postback>MAIN</postback>
+        </button>
+        
+    </template>
+</category>
+
+
+<!-- No Code -->
+
+<category>
+    <pattern>NOCODE</pattern>
+    <template>
+        
+        Which trait would you consider one of your strengths?
+        
+        <button>
+            <text>Attention to Detail</text>
+            <postback>ATTENTION</postback>
+        </button>
+        
+        <button>
+            <text>Communicating with others</text>
+            <postback>COMMUNICATE</postback>
+        </button>
+    </template>
+</category>
+
+
+<!-- Attention to Detail -->
+
+<category>
+    <pattern>ATTENTION</pattern>
+    <template>
+        
+        Which medium would you rather work with?
+        
+        <button>
+            <text>Data and storage</text>
+            <postback>DATABASE</postback>
+        </button>
+        
+        <button>
+            <text>Computer networks</text>
+            <postback>NETWORK</postback>
+        </button>
+        
+    </template>
+</category>
+
+
+<!-- Database Administrator -->
+
+<category>
+    <pattern>DATABASE</pattern>
+    <template>
+        
+        You should become a 
+        <link>
+            <text>Database Administrator!</text>
+            <url>https://www.webopedia.com/TERM/D/database-administrator-dba.html</url>
+        </link>
+        
+        <button>
+            <text>Take quiz again</text>
+            <postback>YES</postback>
+        </button>
+        
+        <button>
+            <text>Return to main menu</text>
+            <postback>MAIN</postback>
+        </button>
+        
+    </template>
+</category>
+
+
+<!-- Network Administrator -->
+
+<category>
+    <pattern>NETWORK</pattern>
+    <template>
+        
+        You should become a 
+        <link>
+            <text>Network Administrator!</text>
+            <url>https://www.rasmussen.edu/degrees/technology/blog/what-does-a-network-administrator-do/</url>
+        </link>
+        
+        <button>
+            <text>Take quiz again</text>
+            <postback>YES</postback>
+        </button>
+        
+        <button>
+            <text>Return to main menu</text>
+            <postback>MAIN</postback>
+        </button>
+        
+    </template>
+</category>
+
+
+<!-- Communicate -->
+
+<category>
+    <pattern>COMMUNICATE</pattern>
+    <template>
+        
+        Would you rather work mostly with people or computer hardware/software?
+        
+        <button>
+            <text>People</text>
+            <postback>MANAGER</postback>
+        </button>
+        
+        <button>
+            <text>Computer Hardware/Software</text>
+            <postback>SYSADMIN</postback>
+        </button>
+    </template>
+</category>
+
+
+<!-- Systems Administrator -->
+
+<category>
+    <pattern>SYSADMIN</pattern>
+    <template>
+        
+        You should become a 
+        <link>
+            <text>Systems Administrator!</text>
+            <url>https://www.computersciencedegreehub.com/faq/what-is-a-systems-administrator/</url>
+        </link>
+        
+        <button>
+            <text>Take quiz again</text>
+            <postback>YES</postback>
+        </button>
+        
+        <button>
+            <text>Return to main menu</text>
+            <postback>MAIN</postback>
+        </button>
+        
+    </template>
+</category>
+
+<!-- IT Manager -->
+
+<category>
+    <pattern>MANAGER</pattern>
+    <template>
+        
+        You should become a 
+        <link>
+            <text>IT Manager!</text>
+            <url>https://www.itcareerfinder.com/it-careers/it-manager.html</url>
+        </link>
+        
+        <button>
+            <text>Take quiz again</text>
+            <postback>YES</postback>
+        </button>
+        
+        <button>
+            <text>Return to main menu</text>
+            <postback>MAIN</postback>
+        </button>
+        
+    </template>
+</category>
+
+</aiml>
